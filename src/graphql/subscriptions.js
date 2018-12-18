@@ -5,6 +5,7 @@ export const onCreateBlog = `subscription OnCreateBlog {
   onCreateBlog {
     id
     name
+    likes
     posts {
       items {
         id
@@ -19,6 +20,7 @@ export const onUpdateBlog = `subscription OnUpdateBlog {
   onUpdateBlog {
     id
     name
+    likes
     posts {
       items {
         id
@@ -33,6 +35,7 @@ export const onDeleteBlog = `subscription OnDeleteBlog {
   onDeleteBlog {
     id
     name
+    likes
     posts {
       items {
         id
@@ -50,6 +53,7 @@ export const onCreatePost = `subscription OnCreatePost {
     blog {
       id
       name
+      likes
     }
     comments {
       items {
@@ -68,6 +72,7 @@ export const onUpdatePost = `subscription OnUpdatePost {
     blog {
       id
       name
+      likes
     }
     comments {
       items {
@@ -86,6 +91,7 @@ export const onDeletePost = `subscription OnDeletePost {
     blog {
       id
       name
+      likes
     }
     comments {
       items {

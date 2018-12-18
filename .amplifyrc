@@ -10,5 +10,6 @@
             "StackName": "alltube-20181217145313",
             "StackId": "arn:aws:cloudformation:us-west-2:706688031207:stack/alltube-20181217145313/8b84c670-024e-11e9-88a6-066c9aefcac8"
         }
-    }
+    },
+    "publish-ignore": []
 }

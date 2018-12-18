@@ -1,15 +1,28 @@
 import React, { Component } from "react";
 import "./App.css";
-import { Form } from "./Form";
+
+import { CreateBlogForm } from "./Form";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Form onSubmit={values => console.log(values)} />
+        <CreateBlogForm />
       </div>
     );
   }
 }
 
 export default App;
+
+//<Connect mutation={graphqlOperation(createBlog)}>
+//{({ mutation }) => (
+//  <Form
+//    onSubmit={async input => {
+//      const response = await mutation({ input });
+//      console.log(response);
+//    }}
+//  />
+//)}
+//</Connect>
+//<Blogs />

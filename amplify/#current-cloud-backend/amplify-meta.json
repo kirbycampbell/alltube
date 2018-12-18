@@ -25,8 +25,8 @@
 				"s3TemplateURL": "https://s3.amazonaws.com/alltube-20181217145313-deployment/amplify-cfn-templates/api/cloudformation-template.json",
 				"logicalId": "apialltube"
 			},
-			"lastPushTimeStamp": "2018-12-18T00:00:52.433Z",
-			"lastPushDirHash": "B90UXw86BHVmNG6by5e/VJGKAPI="
+			"lastPushTimeStamp": "2018-12-18T05:00:30.901Z",
+			"lastPushDirHash": "rFP+hkpIyGXpQepa6VHogzSz2E0="
 		}
 	},
 	"hosting": {
@@ -37,14 +37,17 @@
 				"s3TemplateURL": "https://s3.amazonaws.com/alltube-20181217145313-deployment/amplify-cfn-templates/hosting/template.json",
 				"logicalId": "hostingS3AndCloudFront"
 			},
-			"lastPushTimeStamp": "2018-12-18T00:00:52.440Z",
+			"lastPushTimeStamp": "2018-12-18T05:00:30.116Z",
 			"output": {
 				"S3BucketSecureURL": "https://alltube-20181217155931-hostingbucket.s3.amazonaws.com",
 				"WebsiteURL": "http://alltube-20181217155931-hostingbucket.s3-website-us-west-2.amazonaws.com",
 				"Region": "us-west-2",
-				"HostingBucketName": "alltube-20181217155931-hostingbucket"
+				"HostingBucketName": "alltube-20181217155931-hostingbucket",
+				"CloudFrontSecureURL": "https://d1nnm8x91s6rtj.cloudfront.net",
+				"CloudFrontDistributionID": "EOE4Z8SFTTRF1",
+				"CloudFrontDomainName": "d1nnm8x91s6rtj.cloudfront.net"
 			},
-			"lastPushDirHash": "RYvdPbMzXFmv5DWWWEezecXbehI="
+			"lastPushDirHash": "cGdsSyRCPR5G6F1rkEZAMDSsI/M="
 		}
 	}
 }

@@ -1,35 +1,58 @@
 import * as React from "react";
-interface State {
-  name: string;
-}
-interface Props {
-  onSubmit: (formValues: State) => void;
-}
-export class Form extends React.PureComponent<Props, State> {
-  state = {
-    name: ""
-  };
-  handleChange = (e: any) => {
-    const { name, value } = e.target;
-    this.setState({ [name]: value });
-  };
-  render() {
-    return (
-      <form
-        onSubmit={async e => {
-          e.preventDefault();
-          this.props.onSubmit(this.state);
-        }}
-      >
-        <h3>Create Blog</h3>
-        <input
-          name="name"
-          placeholder="name"
-          value={this.state.name}
-          onChange={this.handleChange}
-        />
-        <button type="submit">save</button>
-      </form>
-    );
-  }
-}
+import { Formik } from "formik";
+import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
+import { Mutation } from "react-apollo";
+import gql from "graphql-tag";
+import { createBlog } from "./graphql/mutations";
+
+export const CreateBlogForm = () => {
+  return (
+    <Mutation mutation={gql(createBlog)}>
+      {" "}
+      {createBlog => (
+        <Formik
+          initialValues={{
+            name: "",
+            likes: 0
+          }}
+          onSubmit={async ({ name, likes }) => {
+            const response = await createBlog({
+              variable: {
+                input: {
+                  name,
+                  likes
+                }
+              }
+            });
+            console.log(response);
+          }}
+        >
+          {({ values, handleChange, handleSubmit }) => (
+            <form onSubmit={handleSubmit}>
+              <TextField
+                name="name"
+                label="Name"
+                value={values.name}
+                onChange={handleChange}
+                margin="normal"
+              />
+              <br />
+              <TextField
+                name="likes"
+                label="Likes"
+                value={values.likes}
+                onChange={handleChange}
+                margin="normal"
+              />
+              <br />
+              <Button type="submit" color="secondary">
+                Submit
+              </Button>
+            </form>
+          )}
+        </Formik>
+      )}
+    </Mutation>
+  );
+};

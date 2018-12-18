@@ -1,7 +1,7 @@
 {
     "AppSyncApiName": "alltube",
-    "schemaGraphql": "s3://alltube-20181217145313-deployment/amplify-appsync-files/schema.graphql.1545087537880",
+    "schemaGraphql": "s3://alltube-20181217145313-deployment/amplify-appsync-files/schema.graphql.1545109165801",
     "ResolverBucket": "alltube-20181217145313-deployment",
     "ResolverRootKey": "amplify-appsync-files",
-    "DeploymentTimestamp": "1545087537880"
+    "DeploymentTimestamp": "1545109165801"
 }

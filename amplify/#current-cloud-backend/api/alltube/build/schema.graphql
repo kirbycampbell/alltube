@@ -1,6 +1,7 @@
 type Blog {
   id: ID!
   name: String!
+  likes: Int
   posts(filter: ModelPostFilterInput, sortDirection: ModelSortDirection, limit: Int, nextToken: String): ModelPostConnection
 }
 
@@ -85,6 +86,7 @@ input ModelBooleanFilterInput {
 input ModelBlogFilterInput {
   id: ModelIDFilterInput
   name: ModelStringFilterInput
+  likes: ModelIntFilterInput
   and: [ModelBlogFilterInput]
   or: [ModelBlogFilterInput]
   not: ModelBlogFilterInput
@@ -102,11 +104,13 @@ type Query {
 input CreateBlogInput {
   id: ID
   name: String!
+  likes: Int
 }
 
 input UpdateBlogInput {
   id: ID!
   name: String
+  likes: Int
 }
 
 input DeleteBlogInput {

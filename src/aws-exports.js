@@ -8,7 +8,7 @@ const awsmobile =  {
     "aws_appsync_apiKey": "da2-5ukaryong5bv7fhyhmj7i3ssei",
     "aws_content_delivery_bucket": "alltube-20181217155931-hostingbucket",
     "aws_content_delivery_bucket_region": "us-west-2",
-    "aws_content_delivery_url": "http://alltube-20181217155931-hostingbucket.s3-website-us-west-2.amazonaws.com"
+    "aws_content_delivery_url": "https://d1nnm8x91s6rtj.cloudfront.net"
 };
 
 

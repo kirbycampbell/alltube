@@ -5,6 +5,7 @@ export const getBlog = `query GetBlog($id: ID!) {
   getBlog(id: $id) {
     id
     name
+    likes
     posts {
       items {
         id
@@ -24,6 +25,7 @@ export const listBlogs = `query ListBlogs(
     items {
       id
       name
+      likes
       posts {
         items {
           id
@@ -43,6 +45,7 @@ export const getPost = `query GetPost($id: ID!) {
     blog {
       id
       name
+      likes
     }
     comments {
       items {
@@ -66,6 +69,7 @@ export const listPosts = `query ListPosts(
       blog {
         id
         name
+        likes
       }
       comments {
         items {

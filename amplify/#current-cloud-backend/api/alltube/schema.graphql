@@ -1,6 +1,7 @@
 type Blog @model {
   id: ID!
   name: String!
+  likes: Int
   posts: [Post] @connection(name: "BlogPosts")
 }
 type Post @model {

@@ -5,6 +5,7 @@ export const createBlog = `mutation CreateBlog($input: CreateBlogInput!) {
   createBlog(input: $input) {
     id
     name
+    likes
     posts {
       items {
         id
@@ -19,6 +20,7 @@ export const updateBlog = `mutation UpdateBlog($input: UpdateBlogInput!) {
   updateBlog(input: $input) {
     id
     name
+    likes
     posts {
       items {
         id
@@ -33,6 +35,7 @@ export const deleteBlog = `mutation DeleteBlog($input: DeleteBlogInput!) {
   deleteBlog(input: $input) {
     id
     name
+    likes
     posts {
       items {
         id
@@ -50,6 +53,7 @@ export const createPost = `mutation CreatePost($input: CreatePostInput!) {
     blog {
       id
       name
+      likes
     }
     comments {
       items {
@@ -68,6 +72,7 @@ export const updatePost = `mutation UpdatePost($input: UpdatePostInput!) {
     blog {
       id
       name
+      likes
     }
     comments {
       items {
@@ -86,6 +91,7 @@ export const deletePost = `mutation DeletePost($input: DeletePostInput!) {
     blog {
       id
       name
+      likes
     }
     comments {
       items {
