@@ -1,0 +1,16 @@
+projects:
+  alltube:
+    schemaPath: src\graphql\schema.json
+    includes:
+      - src\graphql\**\*.js
+    excludes:
+      - ./amplify/**
+    extensions:
+      amplify:
+        codeGenTarget: javascript
+        generatedFileName: ''
+        docsFilePath: src\graphql
+        graphQLApiId: ajqfi7r74fabtdpngxopplgygm
+      endpoints:
+        prod: >-
+          https://lijf2ukin5gs3n4xsh3j7fdbru.appsync-api.us-west-2.amazonaws.com/graphql

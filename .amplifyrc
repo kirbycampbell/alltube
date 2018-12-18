@@ -1,0 +1,14 @@
+{
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "alltube-20181217145313-authRole",
+            "UnauthRoleArn": "arn:aws:iam::706688031207:role/alltube-20181217145313-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::706688031207:role/alltube-20181217145313-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "alltube-20181217145313-deployment",
+            "UnauthRoleName": "alltube-20181217145313-unauthRole",
+            "StackName": "alltube-20181217145313",
+            "StackId": "arn:aws:cloudformation:us-west-2:706688031207:stack/alltube-20181217145313/8b84c670-024e-11e9-88a6-066c9aefcac8"
+        }
+    }
+}

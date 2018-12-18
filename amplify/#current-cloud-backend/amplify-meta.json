@@ -1,0 +1,50 @@
+{
+	"providers": {
+		"awscloudformation": {
+			"AuthRoleName": "alltube-20181217145313-authRole",
+			"UnauthRoleArn": "arn:aws:iam::706688031207:role/alltube-20181217145313-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::706688031207:role/alltube-20181217145313-authRole",
+			"Region": "us-west-2",
+			"DeploymentBucketName": "alltube-20181217145313-deployment",
+			"UnauthRoleName": "alltube-20181217145313-unauthRole",
+			"StackName": "alltube-20181217145313",
+			"StackId": "arn:aws:cloudformation:us-west-2:706688031207:stack/alltube-20181217145313/8b84c670-024e-11e9-88a6-066c9aefcac8"
+		}
+	},
+	"api": {
+		"alltube": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"securityType": "API_KEY",
+				"GraphQLAPIIdOutput": "ajqfi7r74fabtdpngxopplgygm",
+				"GraphQLAPIEndpointOutput": "https://lijf2ukin5gs3n4xsh3j7fdbru.appsync-api.us-west-2.amazonaws.com/graphql",
+				"GraphQLAPIKeyOutput": "da2-5ukaryong5bv7fhyhmj7i3ssei"
+			},
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/alltube-20181217145313-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+				"logicalId": "apialltube"
+			},
+			"lastPushTimeStamp": "2018-12-18T00:00:52.433Z",
+			"lastPushDirHash": "B90UXw86BHVmNG6by5e/VJGKAPI="
+		}
+	},
+	"hosting": {
+		"S3AndCloudFront": {
+			"service": "S3AndCloudFront",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/alltube-20181217145313-deployment/amplify-cfn-templates/hosting/template.json",
+				"logicalId": "hostingS3AndCloudFront"
+			},
+			"lastPushTimeStamp": "2018-12-18T00:00:52.440Z",
+			"output": {
+				"S3BucketSecureURL": "https://alltube-20181217155931-hostingbucket.s3.amazonaws.com",
+				"WebsiteURL": "http://alltube-20181217155931-hostingbucket.s3-website-us-west-2.amazonaws.com",
+				"Region": "us-west-2",
+				"HostingBucketName": "alltube-20181217155931-hostingbucket"
+			},
+			"lastPushDirHash": "RYvdPbMzXFmv5DWWWEezecXbehI="
+		}
+	}
+}
