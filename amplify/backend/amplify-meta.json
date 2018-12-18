@@ -25,8 +25,8 @@
 				"s3TemplateURL": "https://s3.amazonaws.com/alltube-20181217145313-deployment/amplify-cfn-templates/api/cloudformation-template.json",
 				"logicalId": "apialltube"
 			},
-			"lastPushTimeStamp": "2018-12-18T05:00:30.901Z",
-			"lastPushDirHash": "rFP+hkpIyGXpQepa6VHogzSz2E0="
+			"lastPushTimeStamp": "2018-12-18T05:23:19.825Z",
+			"lastPushDirHash": "dKp+Jt7LyFVWlRuusxQVeAdNPE8="
 		}
 	},
 	"hosting": {
@@ -37,7 +37,7 @@
 				"s3TemplateURL": "https://s3.amazonaws.com/alltube-20181217145313-deployment/amplify-cfn-templates/hosting/template.json",
 				"logicalId": "hostingS3AndCloudFront"
 			},
-			"lastPushTimeStamp": "2018-12-18T05:00:30.116Z",
+			"lastPushTimeStamp": "2018-12-18T05:23:18.954Z",
 			"output": {
 				"S3BucketSecureURL": "https://alltube-20181217155931-hostingbucket.s3.amazonaws.com",
 				"WebsiteURL": "http://alltube-20181217155931-hostingbucket.s3-website-us-west-2.amazonaws.com",

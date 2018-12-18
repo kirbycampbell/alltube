@@ -4,27 +4,28 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import { Mutation } from "react-apollo";
 import gql from "graphql-tag";
-import { createBlog } from "./graphql/mutations";
+import { createAuction } from "./graphql/mutations";
 
-export const CreateBlogForm = () => {
+export const CreateAuctionForm = () => {
   return (
-    <Mutation mutation={gql(createBlog)}>
-      {" "}
+    <Mutation mutation={gql(createAuction)}>
       {createBlog => (
         <Formik
           initialValues={{
             name: "",
-            likes: 0
+            price: 0
           }}
-          onSubmit={async ({ name, likes }) => {
-            const response = await createBlog({
-              variable: {
+          onSubmit={async ({ name, price }) => {
+            // call mutation
+            const response = await createAuction({
+              variables: {
                 input: {
                   name,
-                  likes
+                  price
                 }
               }
             });
+
             console.log(response);
           }}
         >
@@ -39,9 +40,9 @@ export const CreateBlogForm = () => {
               />
               <br />
               <TextField
-                name="likes"
-                label="Likes"
-                value={values.likes}
+                name="price"
+                label="Price"
+                value={values.price}
                 onChange={handleChange}
                 margin="normal"
               />

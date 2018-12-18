@@ -1,21 +1,7 @@
-type Blog {
+type Auction {
   id: ID!
   name: String!
-  likes: Int
-  posts(filter: ModelPostFilterInput, sortDirection: ModelSortDirection, limit: Int, nextToken: String): ModelPostConnection
-}
-
-type Post {
-  id: ID!
-  title: String!
-  blog: Blog
-  comments(filter: ModelCommentFilterInput, sortDirection: ModelSortDirection, limit: Int, nextToken: String): ModelCommentConnection
-}
-
-type Comment {
-  id: ID!
-  content: String
-  post: Post
+  price: Float!
 }
 
 enum ModelSortDirection {
@@ -23,8 +9,8 @@ enum ModelSortDirection {
   DESC
 }
 
-type ModelBlogConnection {
-  items: [Blog]
+type ModelAuctionConnection {
+  items: [Auction]
   nextToken: String
 }
 
@@ -83,118 +69,44 @@ input ModelBooleanFilterInput {
   eq: Boolean
 }
 
-input ModelBlogFilterInput {
+input ModelAuctionFilterInput {
   id: ModelIDFilterInput
   name: ModelStringFilterInput
-  likes: ModelIntFilterInput
-  and: [ModelBlogFilterInput]
-  or: [ModelBlogFilterInput]
-  not: ModelBlogFilterInput
+  price: ModelFloatFilterInput
+  and: [ModelAuctionFilterInput]
+  or: [ModelAuctionFilterInput]
+  not: ModelAuctionFilterInput
 }
 
 type Query {
-  getBlog(id: ID!): Blog
-  listBlogs(filter: ModelBlogFilterInput, limit: Int, nextToken: String): ModelBlogConnection
-  getPost(id: ID!): Post
-  listPosts(filter: ModelPostFilterInput, limit: Int, nextToken: String): ModelPostConnection
-  getComment(id: ID!): Comment
-  listComments(filter: ModelCommentFilterInput, limit: Int, nextToken: String): ModelCommentConnection
+  getAuction(id: ID!): Auction
+  listAuctions(filter: ModelAuctionFilterInput, limit: Int, nextToken: String): ModelAuctionConnection
 }
 
-input CreateBlogInput {
+input CreateAuctionInput {
   id: ID
   name: String!
-  likes: Int
+  price: Float!
 }
 
-input UpdateBlogInput {
+input UpdateAuctionInput {
   id: ID!
   name: String
-  likes: Int
+  price: Float
 }
 
-input DeleteBlogInput {
+input DeleteAuctionInput {
   id: ID
 }
 
 type Mutation {
-  createBlog(input: CreateBlogInput!): Blog
-  updateBlog(input: UpdateBlogInput!): Blog
-  deleteBlog(input: DeleteBlogInput!): Blog
-  createPost(input: CreatePostInput!): Post
-  updatePost(input: UpdatePostInput!): Post
-  deletePost(input: DeletePostInput!): Post
-  createComment(input: CreateCommentInput!): Comment
-  updateComment(input: UpdateCommentInput!): Comment
-  deleteComment(input: DeleteCommentInput!): Comment
+  createAuction(input: CreateAuctionInput!): Auction
+  updateAuction(input: UpdateAuctionInput!): Auction
+  deleteAuction(input: DeleteAuctionInput!): Auction
 }
 
 type Subscription {
-  onCreateBlog: Blog @aws_subscribe(mutations: ["createBlog"])
-  onUpdateBlog: Blog @aws_subscribe(mutations: ["updateBlog"])
-  onDeleteBlog: Blog @aws_subscribe(mutations: ["deleteBlog"])
-  onCreatePost: Post @aws_subscribe(mutations: ["createPost"])
-  onUpdatePost: Post @aws_subscribe(mutations: ["updatePost"])
-  onDeletePost: Post @aws_subscribe(mutations: ["deletePost"])
-  onCreateComment: Comment @aws_subscribe(mutations: ["createComment"])
-  onUpdateComment: Comment @aws_subscribe(mutations: ["updateComment"])
-  onDeleteComment: Comment @aws_subscribe(mutations: ["deleteComment"])
-}
-
-type ModelPostConnection {
-  items: [Post]
-  nextToken: String
-}
-
-input ModelPostFilterInput {
-  id: ModelIDFilterInput
-  title: ModelStringFilterInput
-  and: [ModelPostFilterInput]
-  or: [ModelPostFilterInput]
-  not: ModelPostFilterInput
-}
-
-input CreatePostInput {
-  id: ID
-  title: String!
-  postBlogId: ID
-}
-
-input UpdatePostInput {
-  id: ID!
-  title: String
-  postBlogId: ID
-}
-
-input DeletePostInput {
-  id: ID
-}
-
-type ModelCommentConnection {
-  items: [Comment]
-  nextToken: String
-}
-
-input ModelCommentFilterInput {
-  id: ModelIDFilterInput
-  content: ModelStringFilterInput
-  and: [ModelCommentFilterInput]
-  or: [ModelCommentFilterInput]
-  not: ModelCommentFilterInput
-}
-
-input CreateCommentInput {
-  id: ID
-  content: String
-  commentPostId: ID
-}
-
-input UpdateCommentInput {
-  id: ID!
-  content: String
-  commentPostId: ID
-}
-
-input DeleteCommentInput {
-  id: ID
+  onCreateAuction: Auction @aws_subscribe(mutations: ["createAuction"])
+  onUpdateAuction: Auction @aws_subscribe(mutations: ["updateAuction"])
+  onDeleteAuction: Auction @aws_subscribe(mutations: ["deleteAuction"])
 }

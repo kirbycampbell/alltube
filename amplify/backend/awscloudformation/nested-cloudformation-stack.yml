@@ -84,10 +84,10 @@
 				"TemplateURL": "https://s3.amazonaws.com/alltube-20181217145313-deployment/amplify-cfn-templates/api/cloudformation-template.json",
 				"Parameters": {
 					"AppSyncApiName": "alltube",
-					"schemaGraphql": "s3://alltube-20181217145313-deployment/amplify-appsync-files/schema.graphql.1545109165801",
+					"schemaGraphql": "s3://alltube-20181217145313-deployment/amplify-appsync-files/schema.graphql.1545110415595",
 					"ResolverBucket": "alltube-20181217145313-deployment",
 					"ResolverRootKey": "amplify-appsync-files",
-					"DeploymentTimestamp": "1545109165801"
+					"DeploymentTimestamp": "1545110415595"
 				}
 			}
 		},

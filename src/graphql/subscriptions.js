@@ -1,138 +1,27 @@
 // eslint-disable
 // this is an auto generated file. This will be overwritten
 
-export const onCreateBlog = `subscription OnCreateBlog {
-  onCreateBlog {
+export const onCreateAuction = `subscription OnCreateAuction {
+  onCreateAuction {
     id
     name
-    likes
-    posts {
-      items {
-        id
-        title
-      }
-      nextToken
-    }
+    price
   }
 }
 `;
-export const onUpdateBlog = `subscription OnUpdateBlog {
-  onUpdateBlog {
+export const onUpdateAuction = `subscription OnUpdateAuction {
+  onUpdateAuction {
     id
     name
-    likes
-    posts {
-      items {
-        id
-        title
-      }
-      nextToken
-    }
+    price
   }
 }
 `;
-export const onDeleteBlog = `subscription OnDeleteBlog {
-  onDeleteBlog {
+export const onDeleteAuction = `subscription OnDeleteAuction {
+  onDeleteAuction {
     id
     name
-    likes
-    posts {
-      items {
-        id
-        title
-      }
-      nextToken
-    }
-  }
-}
-`;
-export const onCreatePost = `subscription OnCreatePost {
-  onCreatePost {
-    id
-    title
-    blog {
-      id
-      name
-      likes
-    }
-    comments {
-      items {
-        id
-        content
-      }
-      nextToken
-    }
-  }
-}
-`;
-export const onUpdatePost = `subscription OnUpdatePost {
-  onUpdatePost {
-    id
-    title
-    blog {
-      id
-      name
-      likes
-    }
-    comments {
-      items {
-        id
-        content
-      }
-      nextToken
-    }
-  }
-}
-`;
-export const onDeletePost = `subscription OnDeletePost {
-  onDeletePost {
-    id
-    title
-    blog {
-      id
-      name
-      likes
-    }
-    comments {
-      items {
-        id
-        content
-      }
-      nextToken
-    }
-  }
-}
-`;
-export const onCreateComment = `subscription OnCreateComment {
-  onCreateComment {
-    id
-    content
-    post {
-      id
-      title
-    }
-  }
-}
-`;
-export const onUpdateComment = `subscription OnUpdateComment {
-  onUpdateComment {
-    id
-    content
-    post {
-      id
-      title
-    }
-  }
-}
-`;
-export const onDeleteComment = `subscription OnDeleteComment {
-  onDeleteComment {
-    id
-    content
-    post {
-      id
-      title
-    }
+    price
   }
 }
 `;
